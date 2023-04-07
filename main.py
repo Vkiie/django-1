@@ -10,7 +10,7 @@ def get_question():
     qs = ''
     id = 1
     answer = 0
-    response = requests.get("") # link web django
+    response = requests.get("http://127.0.0.1:8000/api/random/") 
     json_data = json.loads(response.text)
     qs += "Question: \n"
     qs += json_data[0]['title'] + "\n"
@@ -48,4 +48,4 @@ async def on_message(message):
         else:
             await message.channel.send('Oops. That is not right😑')
 
-client.run('token')
+client.run('MTA4NzUyOTU1Mjc5ODAyNzg1Ng.Glbpza.0THkEiSkohMmxbbevOVjMRFpyNq9r_zfKQaT14')
